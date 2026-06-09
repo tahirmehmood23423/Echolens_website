@@ -1,98 +1,56 @@
-/* ───────────────────────────────────────────────────────────────
-   ECHOLENS · script.js
-   Minimal interactions — nav toggle, smooth-scroll, scroll-spy.
-   ─────────────────────────────────────────────────────────────── */
-
 (function () {
-    'use strict';
+  'use strict';
 
-    // ─── Mobile nav toggle ───
-    const navToggle = document.getElementById('navToggle');
-    const navMenu   = document.getElementById('navMenu');
-
-    if (navToggle && navMenu) {
-        navToggle.addEventListener('click', () => {
-            navMenu.classList.toggle('open');
-            navToggle.classList.toggle('open');
-        });
-
-        // Close menu when a link is tapped
-        navMenu.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                navMenu.classList.remove('open');
-                navToggle.classList.remove('open');
-            });
-        });
-    }
-
-    // ─── Smooth-scroll for anchor links (offset for sticky nav) ───
-    const anchorLinks = document.querySelectorAll('a[href^="#"]:not([href="#"])');
-    anchorLinks.forEach(a => {
-        a.addEventListener('click', e => {
-            const href   = a.getAttribute('href');
-            const target = document.querySelector(href);
-            if (!target) return;
-            e.preventDefault();
-            const nav    = document.getElementById('nav');
-            const offset = nav ? nav.offsetHeight + 8 : 0;
-            const y      = target.getBoundingClientRect().top + window.pageYOffset - offset;
-            window.scrollTo({ top: y, behavior: 'smooth' });
-        });
+  // Mobile nav toggle
+  const toggle = document.getElementById('navToggle');
+  const menu   = document.getElementById('navMenu');
+  if (toggle && menu) {
+    toggle.addEventListener('click', () => {
+      menu.classList.toggle('open');
+      toggle.classList.toggle('open');
     });
+    menu.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        menu.classList.remove('open');
+        toggle.classList.remove('open');
+      });
+    });
+  }
 
-    // ─── Active-section indicator in nav ───
-    const sections  = document.querySelectorAll('section[id]');
-    const navLinks  = document.querySelectorAll('.nav-menu a[href^="#"]');
+  // Smooth-scroll with nav offset
+  document.querySelectorAll('a[href^="#"]:not([href="#"])').forEach(a => {
+    a.addEventListener('click', e => {
+      const target = document.querySelector(a.getAttribute('href'));
+      if (!target) return;
+      e.preventDefault();
+      const nav = document.getElementById('nav');
+      const y = target.getBoundingClientRect().top + window.pageYOffset - (nav ? nav.offsetHeight + 8 : 0);
+      window.scrollTo({ top: y, behavior: 'smooth' });
+    });
+  });
 
-    function setActive() {
-        let current = '';
-        const scrollY = window.pageYOffset + 140;
-        sections.forEach(sec => {
-            if (scrollY >= sec.offsetTop) current = sec.id;
-        });
-        navLinks.forEach(link => {
-            const href = link.getAttribute('href').slice(1);
-            link.classList.toggle('active', href === current);
-        });
-    }
-    let ticking = false;
-    window.addEventListener('scroll', () => {
-        if (!ticking) {
-            requestAnimationFrame(() => { setActive(); ticking = false; });
-            ticking = true;
-        }
-    }, { passive: true });
-    setActive();
+  // Scroll-spy active nav
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.nav-menu a[href^="#"]');
+  function spy() {
+    let current = '';
+    const y = window.pageYOffset + 160;
+    sections.forEach(s => { if (y >= s.offsetTop) current = s.id; });
+    navLinks.forEach(a => a.classList.toggle('active', a.getAttribute('href').slice(1) === current));
+  }
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) { requestAnimationFrame(() => { spy(); ticking = false; }); ticking = true; }
+  }, { passive: true });
+  spy();
 
-    // ─── Mobile: tag responsive table cells with their column labels ───
-    function tagTableCells() {
-        if (window.innerWidth > 768) return;
-        document.querySelectorAll('.ot-row').forEach(row => {
-            const cells  = row.querySelectorAll('.num');
-            const labels = ['WKS', 'HRS', 'PROGRAMS', 'PRICE (PKR)'];
-            cells.forEach((c, i) => {
-                if (!c.dataset.tagged) {
-                    c.setAttribute('data-label', labels[i] || '');
-                    c.dataset.tagged = '1';
-                }
-            });
-        });
-    }
-    tagTableCells();
-    window.addEventListener('resize', tagTableCells);
+  // Reveal on scroll
+  if ('IntersectionObserver' in window) {
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in-view'); obs.unobserve(e.target); } });
+    }, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
 
-    // ─── Reveal-on-scroll for tier sections ───
-    if ('IntersectionObserver' in window) {
-        const reveal = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('in-view');
-                    reveal.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
-
-        document.querySelectorAll('.course, .why-item, .pillar, .stage, .about-pane')
-            .forEach(el => reveal.observe(el));
-    }
+    document.querySelectorAll('.course, .why-item, .pillar, .stage, .about-card, .enrol-card')
+      .forEach(el => obs.observe(el));
+  }
 })();
