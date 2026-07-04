@@ -4,23 +4,30 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>EchoLens — Pakistan's AI Intelligence Platform</title>
-  <meta name="description" content="24 career-grade programs in AI, Data Science, Generative AI, and Web & Design. Taught live by NUST-trained engineers. Enrol before 29 June for the July 2026 cohort.">
-  <meta name="theme-color" content="#0b1f3a">
+  <meta name="description" content="21 career-grade programs in AI, Data Science, Generative AI, and Web & Design. Taught live by NUST-trained engineers. Register before 31 July for the August 2026 cohort.">
+  <meta name="theme-color" content="#070b1f">
   <link rel="icon" type="image/png" href="logo.png">
   <link rel="stylesheet" href="styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
+
+<!-- AURORA BACKDROP -->
+<div class="aurora" aria-hidden="true">
+  <div class="aurora-blob aurora-a"></div>
+  <div class="aurora-blob aurora-b"></div>
+  <div class="aurora-blob aurora-c"></div>
+</div>
 
 <!-- ANNOUNCEMENT -->
 <div class="announcement">
   <div class="container announcement-inner">
     <span class="announcement-dot"></span>
     <div class="announcement-text">
-      <span class="announcement-badge">JULY 2026 COHORT</span>
-      Enrolment closes <strong>29 June</strong> &nbsp;·&nbsp; Classes commence <strong>1 July</strong> &nbsp;·&nbsp; Early-bird seats limited
+      <span class="announcement-badge">AUGUST 2026 COHORT</span>
+      Registration closes <strong>31 July</strong> &nbsp;·&nbsp; Classes commence <strong>1 August</strong> &nbsp;·&nbsp; 100% online, live sessions
     </div>
     <a href="#enrol" class="announcement-cta">Reserve seat →</a>
   </div>
@@ -39,7 +46,7 @@
       <li><a href="#programs">Programs</a></li>
       <li><a href="#path">Pathway</a></li>
       <li><a href="#enrol">Enrol</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="#contact">FAQ</a></li>
     </ul>
     <a href="#enrol" class="nav-cta">
       Enrol Now
@@ -51,72 +58,48 @@
   </div>
 </nav>
 
-<!-- HERO -->
+<!-- HERO with 3D canvas -->
 <section class="hero" id="top">
-  <div class="container">
+  <canvas id="lens3d" class="hero-canvas" aria-hidden="true"></canvas>
+  <div class="container hero-content">
     <div class="hero-badge">
       <span class="hero-badge-dot"></span>
       PAKISTAN'S AI INTELLIGENCE PLATFORM · CATALOGUE 2026
     </div>
     <h1 class="hero-title">
-      <span>INNOVATE</span>
-      <span><span class="accent">EDUCATE</span> ELEVATE</span>
+      <span class="ht-line">INNOVATE</span>
+      <span class="ht-line"><span class="ht-gradient">EDUCATE</span></span>
+      <span class="ht-line">ELEVATE</span>
     </h1>
     <p class="hero-lede">
-      Twenty-four career-grade programs in Artificial Intelligence, Data Science, Generative AI, and modern Web &amp; Design — designed and delivered by <strong>NUST-trained engineers</strong> building real systems in production.
+      Twenty-one career-grade programs in Artificial Intelligence, Data Science, Generative AI, and modern Web &amp; Design — designed and delivered by <strong>NUST-trained engineers</strong> building real systems in production.
     </p>
     <div class="hero-cta">
-      <a href="#programs" class="btn btn-white btn-lg">Browse Programs</a>
-      <a href="#enrol" class="btn btn-outline btn-lg">Reserve a Seat →</a>
+      <a href="#programs" class="btn btn-glow btn-lg">Browse Programs</a>
+      <a href="#enrol" class="btn btn-glass btn-lg">Reserve a Seat →</a>
     </div>
     <div class="hero-stats">
-      <div class="h-stat">
-        <div class="h-stat-val">24</div>
-        <div class="h-stat-label">Career Programs</div>
-      </div>
-      <div class="h-stat">
-        <div class="h-stat-val">Live</div>
-        <div class="h-stat-label">Remote · All Pakistan</div>
-      </div>
-      <div class="h-stat">
-        <div class="h-stat-val">2 wks</div>
-        <div class="h-stat-label">Shortest program</div>
-      </div>
-      <div class="h-stat">
-        <div class="h-stat-val">NUST</div>
-        <div class="h-stat-label">-trained instructors</div>
-      </div>
+      <div class="h-stat glass-chip"><div class="h-stat-val" data-count="21">21</div><div class="h-stat-label">Career Programs</div></div>
+      <div class="h-stat glass-chip"><div class="h-stat-val">Live</div><div class="h-stat-label">Remote · All Pakistan</div></div>
+      <div class="h-stat glass-chip"><div class="h-stat-val">2 wks</div><div class="h-stat-label">Shortest program</div></div>
+      <div class="h-stat glass-chip"><div class="h-stat-val">NUST</div><div class="h-stat-label">-trained instructors</div></div>
     </div>
   </div>
+  <div class="hero-scroll" aria-hidden="true"><span></span></div>
 </section>
 
 <!-- TRUST STRIP -->
 <div class="trust">
   <div class="container trust-inner">
-    <span class="trust-item">
-      <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-      Certificate on Completion
-    </span>
+    <span class="trust-item"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>Certificate on Completion</span>
     <span class="trust-sep"></span>
-    <span class="trust-item">
-      <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
-      Real Production Projects
-    </span>
+    <span class="trust-item"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>Real Production Projects</span>
     <span class="trust-sep"></span>
-    <span class="trust-item">
-      <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
-      WhatsApp Cohort Support
-    </span>
+    <span class="trust-item"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>WhatsApp Cohort Support</span>
     <span class="trust-sep"></span>
-    <span class="trust-item">
-      <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
-      Small, Accountable Cohorts
-    </span>
+    <span class="trust-item"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>Small, Accountable Cohorts</span>
     <span class="trust-sep"></span>
-    <span class="trust-item">
-      <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-      Starts 1st of Every Month
-    </span>
+    <span class="trust-item"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>2 Live Sessions / Week</span>
   </div>
 </div>
 
@@ -124,7 +107,7 @@
 <section class="section founder">
   <div class="container">
     <div class="founder-grid">
-      <aside class="founder-card">
+      <aside class="founder-card tilt">
         <div class="founder-monogram">TM</div>
         <div class="founder-card-body">
           <h4>Tahir Mehmood</h4>
@@ -166,31 +149,23 @@
       <p>Production-grade AI education — accessible, affordable, and structured for working schedules.</p>
     </div>
     <div class="about-grid">
-      <div class="about-card">
-        <div class="about-icon">
-          <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-        </div>
+      <div class="about-card glass tilt">
+        <div class="about-icon"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
         <h3>Our Mission</h3>
         <p>To make production-grade AI education radically accessible across Pakistan — priced for Pakistani students, structured for working schedules.</p>
       </div>
-      <div class="about-card">
-        <div class="about-icon">
-          <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-        </div>
+      <div class="about-card glass tilt">
+        <div class="about-icon"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div>
         <h3>Our Vision</h3>
         <p>A Pakistan where AI fluency is a baseline skill — not a luxury. By 2030, a generation of Pakistani students who can ship AI products and freelance globally.</p>
       </div>
-      <div class="about-card">
-        <div class="about-icon">
-          <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-        </div>
+      <div class="about-card glass tilt">
+        <div class="about-icon"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>
         <h3>What We Teach</h3>
         <p>From Python and SQL fundamentals to LangChain, RAG, and multi-agent systems. Plus full-stack web, UI/UX, and design — every project deployable and GitHub-ready.</p>
       </div>
-      <div class="about-card">
-        <div class="about-icon">
-          <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
-        </div>
+      <div class="about-card glass tilt">
+        <div class="about-icon"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg></div>
         <h3>How We Teach</h3>
         <p>Two live sessions a week, two hours each. A WhatsApp cohort for daily Q&amp;A. Weekly reviews. A capstone you can show. A teacher who has actually shipped what they teach.</p>
       </div>
@@ -225,54 +200,47 @@
 <section id="programs" class="section overview">
   <div class="container">
     <div class="section-head">
-      <span class="section-label">CATALOGUE OVERVIEW</span>
-      <h2>Five tracks. <span>Twenty-four programs.</span> One coherent path.</h2>
+      <span class="section-label">CATALOGUE OVERVIEW · AUGUST 2026</span>
+      <h2>Four tiers. <span>Twenty-one programs.</span> One coherent path.</h2>
       <p>Click any tier to jump directly to its programs.</p>
     </div>
-    <div class="ov-table">
+    <div class="ov-table glass">
       <div class="ov-header">
         <span>TIER</span>
         <span>BEST FOR</span>
-        <span class="num">WKS</span>
-        <span class="num">HRS</span>
+        <span class="num">DURATION</span>
         <span class="num">PROGS</span>
-        <span class="num right">PRICE (PKR)</span>
+        <span class="num right">FEE (PKR)</span>
       </div>
       <a href="#tier-bootcamps" class="ov-row">
         <div class="ov-tier"><h5>Bootcamps</h5><em>Fast, focused, applied</em></div>
         <span class="ov-best">Beginners, freelancers, and professionals who want one practical skill, fast.</span>
-        <span class="num">2</span><span class="num">8</span><span class="num">5</span>
-        <span class="num num-price right">3,500 – 5,500</span>
+        <span class="num">2 wks · 8 hrs</span><span class="num">3</span>
+        <span class="num num-price right">5,000</span>
       </a>
       <a href="#tier-short" class="ov-row">
         <div class="ov-tier"><h5>Short Courses</h5><em>Foundational &amp; specialised</em></div>
-        <span class="ov-best">Students building core competence in Python, SQL, Power BI, ML, or Gen AI.</span>
-        <span class="num">6</span><span class="num">24</span><span class="num">5</span>
-        <span class="num num-price right">9,000 – 12,500</span>
+        <span class="ov-best">Students building core competence in Python, analytics, ML, Gen AI, or automation.</span>
+        <span class="num">6 wks · 24 hrs</span><span class="num">5</span>
+        <span class="num num-price right">12,500 – 14,000</span>
       </a>
       <a href="#tier-specialist" class="ov-row">
-        <div class="ov-tier"><h5>Specialist Tracks</h5><em>Hero programs</em></div>
-        <span class="ov-best">Developers ready to specialise in Gen AI engineering, agents, ML, or deep learning.</span>
-        <span class="num">8</span><span class="num">32</span><span class="num">5</span>
-        <span class="num num-price right">16,500 – 19,500</span>
+        <div class="ov-tier"><h5>Specialist &amp; Professional Tracks</h5><em>Hero programs</em></div>
+        <span class="ov-best">Developers and designers ready to specialise — Gen AI, agents, ML, deep learning, WordPress, UI/UX, or graphic design.</span>
+        <span class="num">8 wks / 2 mo</span><span class="num">8</span>
+        <span class="num num-price right">20,000 – 23,000</span>
       </a>
       <a href="#tier-career" class="ov-row">
         <div class="ov-tier"><h5>Career Tracks</h5><em>Flagship, portfolio-driven</em></div>
-        <span class="ov-best">Serious career-builders pursuing roles in Data Science, AI Engineering, or ML Engineering.</span>
-        <span class="num">12</span><span class="num">48</span><span class="num">5</span>
-        <span class="num num-price right">25,000 – 32,000</span>
-      </a>
-      <a href="#tier-design" class="ov-row ov-row-new">
-        <div class="ov-tier"><h5>Design &amp; Web <span class="new-badge">NEW</span></h5><em>Build · Design · Ship</em></div>
-        <span class="ov-best">Designers &amp; developers in WordPress, UI/UX, Graphic Design, and Full-Stack Laravel.</span>
-        <span class="num">8–12</span><span class="num">32–48</span><span class="num">4</span>
-        <span class="num num-price right">16,000 – 40,000</span>
+        <span class="ov-best">Serious career-builders pursuing roles in Data Science, AI Engineering, ML Engineering, or Full-Stack Development.</span>
+        <span class="num">3 months</span><span class="num">5</span>
+        <span class="num num-price right">38,000 – 45,000</span>
       </a>
     </div>
     <div class="ov-meta">
       <div class="ov-meta-item"><span class="ov-meta-key">SCHEDULE</span><span class="ov-meta-val">2 classes / week</span></div>
       <div class="ov-meta-item"><span class="ov-meta-key">SESSION</span><span class="ov-meta-val">2 hours each</span></div>
-      <div class="ov-meta-item"><span class="ov-meta-key">MODE</span><span class="ov-meta-val">Live · Remote</span></div>
+      <div class="ov-meta-item"><span class="ov-meta-key">MODE</span><span class="ov-meta-val">100% Online · Live</span></div>
       <div class="ov-meta-item"><span class="ov-meta-key">OUTCOME</span><span class="ov-meta-val">Live capstone</span></div>
     </div>
     <p class="ov-foot">Each program includes live instruction, project reviews, a cohort group, a deployable capstone, and a completion certificate listing the work you shipped.</p>
@@ -280,121 +248,69 @@
 </section>
 
 <!-- ── SECTION 01 · BOOTCAMPS ── -->
-<section id="tier-bootcamps" class="section tier tier-light">
+<section id="tier-bootcamps" class="section tier">
   <div class="container">
     <div class="tier-intro">
       <div>
-        <div class="tier-intro-meta">SECTION 01 · PROGRAMS 01–05</div>
+        <div class="tier-intro-meta">SECTION 01 · BOOTCAMPS BC-01 – BC-03</div>
         <h2>Two-week <span>bootcamps.</span></h2>
-        <p>Eight hours of live instruction. One focused skill. One project you can deploy. Designed for freelancers and professionals who want a practical capability — fast.</p>
+        <p>Fast-paced, high-impact introductory courses designed for rapid skill acquisition. Eight hours of live instruction. One focused skill. One project you can deploy.</p>
       </div>
-      <div class="tier-stats">
+      <div class="tier-stats glass">
         <div class="ts-item"><span class="ts-key">Duration</span><span class="ts-val">2 wks</span></div>
         <div class="ts-item"><span class="ts-key">Hours</span><span class="ts-val">8</span></div>
-        <div class="ts-item"><span class="ts-key">Programs</span><span class="ts-val">5</span></div>
-        <div class="ts-item"><span class="ts-key">From</span><span class="ts-val">PKR 3,500</span></div>
+        <div class="ts-item"><span class="ts-key">Programs</span><span class="ts-val">3</span></div>
+        <div class="ts-item"><span class="ts-key">Fee</span><span class="ts-val">PKR 5,000</span></div>
       </div>
     </div>
-    <div class="course-list">
+    <div class="course-grid">
 
-      <article class="course">
-        <div class="course-num">01</div>
-        <div class="course-body">
-          <h3>AI Automation with n8n &amp; Make.com</h3>
-          <p class="course-for">For freelancers, business owners, and non-coders building real automations.</p>
-          <ul>
-            <li>n8n and Make fundamentals — triggers, nodes, branching, error handling</li>
-            <li>Plugging OpenAI, Claude, and Gemini APIs into live workflows</li>
-            <li>Email auto-responders, lead-gen bots, content schedulers, WhatsApp bots</li>
-            <li>Project — a 3-step AI agent that processes form submissions end-to-end</li>
-          </ul>
+      <article class="course glass tilt">
+        <div class="course-top"><span class="course-code">BC-01</span></div>
+        <h3>AI Automation with n8n &amp; Make.com</h3>
+        <p class="course-for">For freelancers, business owners, and non-coders building real automations.</p>
+        <ul>
+          <li>n8n and Make fundamentals — triggers, nodes, branching, error handling</li>
+          <li>Plugging OpenAI, Claude, and Gemini APIs into live workflows</li>
+          <li>Email auto-responders, lead-gen bots, content schedulers, WhatsApp bots</li>
+          <li>Project — a 3-step AI agent that processes form submissions end-to-end</li>
+        </ul>
+        <div class="course-foot">
+          <span class="cf-duration">2 Weeks · 8 Hrs</span>
+          <span class="cf-price"><span class="cf-pkr">PKR</span>5,000</span>
         </div>
-        <aside class="course-price-block">
-          <span class="cp-label">TUITION</span>
-          <span class="cp-amount"><span class="cp-pkr">PKR</span>4,500</span>
-          <span class="cp-hr-label">PER HOUR</span>
-          <span class="cp-hr">PKR 562</span>
-        </aside>
       </article>
 
-      <article class="course">
-        <div class="course-num">02</div>
-        <div class="course-body">
-          <h3>Prompt Engineering &amp; ChatGPT / Claude Mastery</h3>
-          <p class="course-for">For students, professionals, and anyone using AI tools daily.</p>
-          <ul>
-            <li>Prompt patterns — few-shot, chain-of-thought, role prompting, ReAct</li>
-            <li>System prompts, prompt chaining, structured outputs and JSON mode</li>
-            <li>Comparing Claude, GPT, Gemini, and Grok across real task types</li>
-            <li>Project — a personal AI workflow assistant tuned to your job or studies</li>
-          </ul>
+      <article class="course glass tilt">
+        <div class="course-top"><span class="course-code">BC-02</span></div>
+        <h3>Prompt Engineering &amp; ChatGPT / Claude Mastery</h3>
+        <p class="course-for">For students, professionals, and anyone using AI tools daily.</p>
+        <ul>
+          <li>Prompt patterns — few-shot, chain-of-thought, role prompting, ReAct</li>
+          <li>System prompts, prompt chaining, structured outputs and JSON mode</li>
+          <li>Comparing Claude, GPT, Gemini, and Grok across real task types</li>
+          <li>Project — a personal AI workflow assistant tuned to your job or studies</li>
+        </ul>
+        <div class="course-foot">
+          <span class="cf-duration">2 Weeks · 8 Hrs</span>
+          <span class="cf-price"><span class="cf-pkr">PKR</span>5,000</span>
         </div>
-        <aside class="course-price-block">
-          <span class="cp-label">TUITION</span>
-          <span class="cp-amount"><span class="cp-pkr">PKR</span>3,500</span>
-          <span class="cp-hr-label">PER HOUR</span>
-          <span class="cp-hr">PKR 437</span>
-        </aside>
       </article>
 
-      <article class="course">
-        <div class="course-num">03</div>
-        <div class="course-body">
-          <h3>Vibe Coding with Cursor &amp; Claude Code</h3>
-          <p class="course-for">For aspiring developers and freelancers shipping fast.</p>
-          <ul>
-            <li>Setting up Cursor, Claude Code, and GitHub Copilot end-to-end</li>
-            <li>AI pair-programming — write, debug, and refactor at 5x speed</li>
-            <li>Shipping full applications without writing traditional boilerplate</li>
-            <li>Project — build and deploy a working web app in two weeks</li>
-          </ul>
+      <article class="course glass tilt">
+        <div class="course-top"><span class="course-code">BC-03</span></div>
+        <h3>Everyday AI: Smarter Study, Work &amp; Content</h3>
+        <p class="course-for">For students, creators, and working professionals who do not code.</p>
+        <ul>
+          <li>AI for emails, reports, research, presentations, and study workflows</li>
+          <li>Excel with Copilot, Gamma, Perplexity, and NotebookLM for real work</li>
+          <li>Content creation with AI — writing, visuals, and social workflows</li>
+          <li>Project — automate one personal study or work workflow end-to-end</li>
+        </ul>
+        <div class="course-foot">
+          <span class="cf-duration">2 Weeks · 8 Hrs</span>
+          <span class="cf-price"><span class="cf-pkr">PKR</span>5,000</span>
         </div>
-        <aside class="course-price-block">
-          <span class="cp-label">TUITION</span>
-          <span class="cp-amount"><span class="cp-pkr">PKR</span>5,500</span>
-          <span class="cp-hr-label">PER HOUR</span>
-          <span class="cp-hr">PKR 687</span>
-        </aside>
-      </article>
-
-      <article class="course">
-        <div class="course-num">04</div>
-        <div class="course-body">
-          <h3>AI for Business &amp; Productivity</h3>
-          <p class="course-for">For students, freelancers, and working professionals who do not code.</p>
-          <ul>
-            <li>AI for emails, reports, research, and presentations</li>
-            <li>Excel with Copilot, Gamma, Perplexity, and NotebookLM for real work</li>
-            <li>Notion AI, Claude Projects, and building your own custom GPTs</li>
-            <li>Project — automate one personal workflow end-to-end</li>
-          </ul>
-        </div>
-        <aside class="course-price-block">
-          <span class="cp-label">TUITION</span>
-          <span class="cp-amount"><span class="cp-pkr">PKR</span>4,000</span>
-          <span class="cp-hr-label">PER HOUR</span>
-          <span class="cp-hr">PKR 500</span>
-        </aside>
-      </article>
-
-      <article class="course">
-        <div class="course-num">05</div>
-        <div class="course-body">
-          <h3>No-Code AI Agents</h3>
-          <p class="course-for">For business users and automation freelancers.</p>
-          <ul>
-            <li>Building agents in n8n, Lindy, and Relevance AI without code</li>
-            <li>Tool use, memory, and multi-step reasoning patterns</li>
-            <li>Voice agents — VAPI and Bland AI basics</li>
-            <li>Project — deploy a customer-support or lead-qualification agent</li>
-          </ul>
-        </div>
-        <aside class="course-price-block">
-          <span class="cp-label">TUITION</span>
-          <span class="cp-amount"><span class="cp-pkr">PKR</span>5,000</span>
-          <span class="cp-hr-label">PER HOUR</span>
-          <span class="cp-hr">PKR 625</span>
-        </aside>
       </article>
 
     </div>
@@ -402,126 +318,106 @@
 </section>
 
 <!-- ── SECTION 02 · SHORT COURSES ── -->
-<section id="tier-short" class="section tier tier-gray">
+<section id="tier-short" class="section tier tier-alt">
   <div class="container">
     <div class="tier-intro">
       <div>
-        <div class="tier-intro-meta">SECTION 02 · PROGRAMS 06–10</div>
+        <div class="tier-intro-meta">SECTION 02 · SHORT COURSES SC-01 – SC-05</div>
         <h2>Six-week <span>short courses.</span></h2>
-        <p>Twenty-four hours of structured instruction. Build real competence in Python, SQL, Power BI, machine learning, or generative AI — from the ground up.</p>
+        <p>Twenty-four hours of structured instruction. Core competencies required to enter data analytics, machine learning, and automation roles — from the ground up.</p>
       </div>
-      <div class="tier-stats">
+      <div class="tier-stats glass">
         <div class="ts-item"><span class="ts-key">Duration</span><span class="ts-val">6 wks</span></div>
         <div class="ts-item"><span class="ts-key">Hours</span><span class="ts-val">24</span></div>
         <div class="ts-item"><span class="ts-key">Programs</span><span class="ts-val">5</span></div>
-        <div class="ts-item"><span class="ts-key">From</span><span class="ts-val">PKR 9,000</span></div>
+        <div class="ts-item"><span class="ts-key">From</span><span class="ts-val">PKR 12,500</span></div>
       </div>
     </div>
-    <div class="course-list">
+    <div class="course-grid">
 
-      <article class="course">
-        <div class="course-num">06</div>
-        <div class="course-body">
-          <h3>Python for Data Science</h3>
-          <p class="course-for">For absolute beginners and students entering data science.</p>
-          <ul>
-            <li>Python fundamentals — variables, loops, functions, and object-oriented design</li>
-            <li>NumPy and Pandas for data manipulation at scale</li>
-            <li>Matplotlib and Seaborn for clear, professional visualisations</li>
-            <li>Working with APIs, CSVs, Excel, and JSON</li>
-            <li>Mini project — exploratory data analysis on a real dataset</li>
-          </ul>
+      <article class="course glass tilt">
+        <div class="course-top"><span class="course-code">SC-01</span></div>
+        <h3>Python for Data Science</h3>
+        <p class="course-for">For absolute beginners and students entering data science.</p>
+        <ul>
+          <li>Python fundamentals — variables, loops, functions, and OOP design</li>
+          <li>NumPy and Pandas for data manipulation at scale</li>
+          <li>Matplotlib and Seaborn for clear, professional visualisations</li>
+          <li>Working with APIs, CSVs, Excel, and JSON</li>
+          <li>Mini project — exploratory data analysis on a real dataset</li>
+        </ul>
+        <div class="course-foot">
+          <span class="cf-duration">6 Weeks · 24 Hrs</span>
+          <span class="cf-price"><span class="cf-pkr">PKR</span>12,500</span>
         </div>
-        <aside class="course-price-block">
-          <span class="cp-label">TUITION</span>
-          <span class="cp-amount"><span class="cp-pkr">PKR</span>9,500</span>
-          <span class="cp-hr-label">PER HOUR</span>
-          <span class="cp-hr">PKR 395</span>
-        </aside>
       </article>
 
-      <article class="course">
-        <div class="course-num">07</div>
-        <div class="course-body">
-          <h3>Generative AI Essentials</h3>
-          <p class="course-for">For beginners to generative AI with basic Python familiarity.</p>
-          <ul>
-            <li>The LLM landscape — GPT, Claude, Gemini, Llama, and open-weight models</li>
-            <li>Prompt engineering in depth — when each pattern works and why</li>
-            <li>Calling LLM APIs from Python (OpenAI and Anthropic)</li>
-            <li>Introduction to retrieval-augmented generation (RAG)</li>
-            <li>Project — a chatbot answering questions from your own PDFs</li>
-          </ul>
+      <article class="course glass tilt">
+        <div class="course-top"><span class="course-code">SC-02</span></div>
+        <h3>Generative AI Essentials</h3>
+        <p class="course-for">For beginners to generative AI with basic Python familiarity.</p>
+        <ul>
+          <li>The LLM landscape — GPT, Claude, Gemini, Llama, and open-weight models</li>
+          <li>Prompt engineering in depth — when each pattern works and why</li>
+          <li>Calling LLM APIs from Python (OpenAI and Anthropic)</li>
+          <li>Introduction to retrieval-augmented generation (RAG)</li>
+          <li>Project — a chatbot answering questions from your own PDFs</li>
+        </ul>
+        <div class="course-foot">
+          <span class="cf-duration">6 Weeks · 24 Hrs</span>
+          <span class="cf-price"><span class="cf-pkr">PKR</span>14,000</span>
         </div>
-        <aside class="course-price-block">
-          <span class="cp-label">TUITION</span>
-          <span class="cp-amount"><span class="cp-pkr">PKR</span>12,000</span>
-          <span class="cp-hr-label">PER HOUR</span>
-          <span class="cp-hr">PKR 500</span>
-        </aside>
       </article>
 
-      <article class="course">
-        <div class="course-num">08</div>
-        <div class="course-body">
-          <h3>SQL for Data Analytics</h3>
-          <p class="course-for">For aspiring data analysts and business students.</p>
-          <ul>
-            <li>Relational database fundamentals and entity-relationship modelling</li>
-            <li>SELECT, JOINs, subqueries, CTEs, and window functions</li>
-            <li>Data cleaning and analysis directly in SQL</li>
-            <li>Hands-on with PostgreSQL and BigQuery</li>
-            <li>Project — end-to-end analysis on a sales or HR dataset</li>
-          </ul>
+      <article class="course glass tilt">
+        <div class="course-top"><span class="course-code">SC-03</span></div>
+        <h3>Data Analytics with SQL &amp; Power BI</h3>
+        <p class="course-for">End-to-end analytics workflow — querying, dashboards &amp; business reporting.</p>
+        <ul>
+          <li>Relational databases, SELECT, JOINs, subqueries, CTEs, and window functions</li>
+          <li>Data cleaning and analysis directly in SQL — PostgreSQL hands-on</li>
+          <li>Power BI Desktop, data modelling, and DAX essentials</li>
+          <li>Dashboards, KPIs, drill-through reports, and data storytelling</li>
+          <li>Project — a full business dashboard with insight narrative</li>
+        </ul>
+        <div class="course-foot">
+          <span class="cf-duration">6 Weeks · 24 Hrs</span>
+          <span class="cf-price"><span class="cf-pkr">PKR</span>13,500</span>
         </div>
-        <aside class="course-price-block">
-          <span class="cp-label">TUITION</span>
-          <span class="cp-amount"><span class="cp-pkr">PKR</span>9,000</span>
-          <span class="cp-hr-label">PER HOUR</span>
-          <span class="cp-hr">PKR 375</span>
-        </aside>
       </article>
 
-      <article class="course">
-        <div class="course-num">09</div>
-        <div class="course-body">
-          <h3>Power BI for Business Analytics</h3>
-          <p class="course-for">For business professionals, MBA students, and working analysts.</p>
-          <ul>
-            <li>Power BI Desktop, data modelling, and DAX essentials</li>
-            <li>Building dashboards, KPIs, and drill-through reports</li>
-            <li>Connecting to Excel, SQL, and live web sources</li>
-            <li>Storytelling with data — the analyst's craft</li>
-            <li>Project — a full business dashboard with insight narrative</li>
-          </ul>
+      <article class="course glass tilt">
+        <div class="course-top"><span class="course-code">SC-04</span></div>
+        <h3>Introduction to Machine Learning</h3>
+        <p class="course-for">For students with basic Python who want to enter machine learning.</p>
+        <ul>
+          <li>Supervised versus unsupervised learning — the conceptual map</li>
+          <li>Regression, classification, and clustering with Scikit-learn</li>
+          <li>Model evaluation, train/test splits, and cross-validation</li>
+          <li>Feature engineering fundamentals</li>
+          <li>Project — a prediction model on a real-world dataset</li>
+        </ul>
+        <div class="course-foot">
+          <span class="cf-duration">6 Weeks · 24 Hrs</span>
+          <span class="cf-price"><span class="cf-pkr">PKR</span>13,000</span>
         </div>
-        <aside class="course-price-block">
-          <span class="cp-label">TUITION</span>
-          <span class="cp-amount"><span class="cp-pkr">PKR</span>10,500</span>
-          <span class="cp-hr-label">PER HOUR</span>
-          <span class="cp-hr">PKR 437</span>
-        </aside>
       </article>
 
-      <article class="course">
-        <div class="course-num">10</div>
-        <div class="course-body">
-          <h3>Introduction to Machine Learning</h3>
-          <p class="course-for">For students with basic Python who want to enter machine learning.</p>
-          <ul>
-            <li>Supervised versus unsupervised learning — the conceptual map</li>
-            <li>Regression, classification, and clustering with Scikit-learn</li>
-            <li>Model evaluation, train/test splits, and cross-validation</li>
-            <li>Feature engineering fundamentals</li>
-            <li>Project — a prediction model on a real-world dataset</li>
-          </ul>
+      <article class="course glass tilt">
+        <div class="course-top"><span class="course-code">SC-05</span></div>
+        <h3>AI Automation Tools Track</h3>
+        <p class="course-for">Leveraging modern productivity toolkits for business workflows.</p>
+        <ul>
+          <li>Automation platforms in depth — n8n, Make, and Zapier compared</li>
+          <li>Connecting LLM APIs, webhooks, and business apps into pipelines</li>
+          <li>No-code agents — tool use, memory, and multi-step reasoning patterns</li>
+          <li>Voice and chat agents for support and lead qualification</li>
+          <li>Project — deploy a complete business automation workflow</li>
+        </ul>
+        <div class="course-foot">
+          <span class="cf-duration">6 Weeks · 24 Hrs</span>
+          <span class="cf-price"><span class="cf-pkr">PKR</span>14,000</span>
         </div>
-        <aside class="course-price-block">
-          <span class="cp-label">TUITION</span>
-          <span class="cp-amount"><span class="cp-pkr">PKR</span>12,500</span>
-          <span class="cp-hr-label">PER HOUR</span>
-          <span class="cp-hr">PKR 520</span>
-        </aside>
       </article>
 
     </div>
@@ -529,129 +425,158 @@
 </section>
 
 <!-- ── SECTION 03 · SPECIALIST TRACKS ── -->
-<section id="tier-specialist" class="section tier tier-light">
+<section id="tier-specialist" class="section tier">
   <div class="container">
     <div class="tier-intro">
       <div>
-        <div class="tier-intro-meta">SECTION 03 · PROGRAMS 11–15</div>
-        <h2>Eight-week <span>specialist tracks.</span></h2>
-        <p>Thirty-two hours of intensive, project-driven instruction in a single specialism — generative AI engineering, AI agents, machine learning, deep learning, or data analytics. The hero offerings.</p>
+        <div class="tier-intro-meta">SECTION 03 · SPECIALIST &amp; PROFESSIONAL TRACKS ST-01 – ST-08</div>
+        <h2>Specialist &amp; professional <span>tracks.</span></h2>
+        <p>Comprehensive structural tracks focused on applied engineering, creative design, and system architectures. Eight weeks or two months of intensive, project-driven instruction.</p>
       </div>
-      <div class="tier-stats">
-        <div class="ts-item"><span class="ts-key">Duration</span><span class="ts-val">8 wks</span></div>
+      <div class="tier-stats glass">
+        <div class="ts-item"><span class="ts-key">Duration</span><span class="ts-val">8 wks / 2 mo</span></div>
         <div class="ts-item"><span class="ts-key">Hours</span><span class="ts-val">32</span></div>
-        <div class="ts-item"><span class="ts-key">Programs</span><span class="ts-val">5</span></div>
-        <div class="ts-item"><span class="ts-key">From</span><span class="ts-val">PKR 16,500</span></div>
+        <div class="ts-item"><span class="ts-key">Programs</span><span class="ts-val">8</span></div>
+        <div class="ts-item"><span class="ts-key">From</span><span class="ts-val">PKR 20,000</span></div>
       </div>
     </div>
-    <div class="course-list">
+    <div class="course-grid">
 
-      <article class="course">
-        <div class="course-num">11</div>
-        <div class="course-body">
-          <h3>Data Analytics Career Track</h3>
-          <p class="course-for">For career-switchers and aspiring data analysts.</p>
-          <ul>
-            <li>Python (Pandas, NumPy) for analysis at production scale</li>
-            <li>SQL for data extraction — JOINs and window functions</li>
-            <li>Power BI dashboards designed for executive audiences</li>
-            <li>Statistics for analysts — descriptive and inferential basics</li>
-            <li>Capstone — a client-style dashboard with insight report (resume-ready)</li>
-          </ul>
+      <article class="course glass tilt">
+        <div class="course-top"><span class="course-code">ST-01</span></div>
+        <h3>WordPress Development</h3>
+        <p class="course-for">Includes themes, custom layouts &amp; client-ready delivery.</p>
+        <ul>
+          <li>WordPress fundamentals — hosting, domains, dashboard, core architecture</li>
+          <li>Theme customisation, Elementor, and modern page builders</li>
+          <li>Plugins, security, performance, and SEO essentials</li>
+          <li>WooCommerce — building real e-commerce stores end-to-end</li>
+          <li>Capstone — deploy a live, client-grade website</li>
+        </ul>
+        <div class="course-foot">
+          <span class="cf-duration">2 Months</span>
+          <span class="cf-price"><span class="cf-pkr">PKR</span>20,000</span>
         </div>
-        <aside class="course-price-block">
-          <span class="cp-label">TUITION</span>
-          <span class="cp-amount"><span class="cp-pkr">PKR</span>16,500</span>
-          <span class="cp-hr-label">PER HOUR</span>
-          <span class="cp-hr">PKR 515</span>
-        </aside>
       </article>
 
-      <article class="course course-hero">
-        <div class="course-num">12</div>
-        <div class="course-body">
-          <h3>Generative AI Engineering <span class="star">★</span></h3>
-          <p class="course-for">For developers building real generative AI products. — Hero program.</p>
-          <ul>
-            <li>LLM internals — tokens, embeddings, and context windows demystified</li>
-            <li>LangChain and LlamaIndex for production applications</li>
-            <li>RAG architectures — chunking, vector DBs (Pinecone, Chroma, Qdrant)</li>
-            <li>Fine-tuning versus RAG versus prompting — when to use what</li>
-            <li>Deployment with FastAPI, Streamlit, and Docker</li>
-            <li>Capstone — a domain-specific chatbot (legal, medical, or EdTech)</li>
-          </ul>
+      <article class="course glass tilt">
+        <div class="course-top"><span class="course-code">ST-02</span></div>
+        <h3>Graphic Designing</h3>
+        <p class="course-for">Brand identity, marketing collateral &amp; creative assets.</p>
+        <ul>
+          <li>Design fundamentals — colour, typography, composition, hierarchy</li>
+          <li>Adobe Photoshop and Illustrator to professional output</li>
+          <li>Logo design, branding kits, and visual identity systems</li>
+          <li>Social media design, posters, and print-ready artwork</li>
+          <li>Capstone — a complete brand identity package, portfolio-ready</li>
+        </ul>
+        <div class="course-foot">
+          <span class="cf-duration">2 Months</span>
+          <span class="cf-price"><span class="cf-pkr">PKR</span>20,000</span>
         </div>
-        <aside class="course-price-block">
-          <span class="cp-label">TUITION</span>
-          <span class="cp-amount"><span class="cp-pkr">PKR</span>18,500</span>
-          <span class="cp-hr-label">PER HOUR</span>
-          <span class="cp-hr">PKR 578</span>
-        </aside>
       </article>
 
-      <article class="course course-hero">
-        <div class="course-num">13</div>
-        <div class="course-body">
-          <h3>AI Agents &amp; Automation Engineering <span class="star">★</span></h3>
-          <p class="course-for">For developers, automation engineers, and AI builders.</p>
-          <ul>
-            <li>Agent frameworks — LangGraph, CrewAI, and AutoGen compared</li>
-            <li>Tool use, function calling, and memory systems</li>
-            <li>Multi-agent orchestration patterns</li>
-            <li>Production concerns — error handling and observability with LangSmith</li>
-            <li>Capstone — a deployed multi-agent system (research, sales SDR, or content)</li>
-          </ul>
+      <article class="course glass tilt">
+        <div class="course-top"><span class="course-code">ST-03</span></div>
+        <h3>UI / UX Designing</h3>
+        <p class="course-for">Wireframing, prototyping, user journeys &amp; Figma mastery.</p>
+        <ul>
+          <li>UX research, user flows, and information architecture</li>
+          <li>Wireframing, prototyping, and design thinking</li>
+          <li>Figma end-to-end — components, auto-layout, design systems</li>
+          <li>Usability testing and design critique</li>
+          <li>Capstone — a full product redesign or new app concept, prototyped</li>
+        </ul>
+        <div class="course-foot">
+          <span class="cf-duration">2 Months</span>
+          <span class="cf-price"><span class="cf-pkr">PKR</span>21,000</span>
         </div>
-        <aside class="course-price-block">
-          <span class="cp-label">TUITION</span>
-          <span class="cp-amount"><span class="cp-pkr">PKR</span>19,000</span>
-          <span class="cp-hr-label">PER HOUR</span>
-          <span class="cp-hr">PKR 593</span>
-        </aside>
       </article>
 
-      <article class="course">
-        <div class="course-num">14</div>
-        <div class="course-body">
-          <h3>Machine Learning Fundamentals</h3>
-          <p class="course-for">For CS and EE students and aspiring ML engineers.</p>
-          <ul>
-            <li>Just-enough math — linear algebra, calculus, and statistics for ML</li>
-            <li>Scikit-learn end-to-end pipelines</li>
-            <li>Trees and ensembles — Random Forest, XGBoost, and LightGBM</li>
-            <li>Introduction to neural networks</li>
-            <li>Deployment basics with FastAPI</li>
-            <li>Capstone — an end-to-end ML project, deployed and shareable</li>
-          </ul>
+      <article class="course glass tilt">
+        <div class="course-top"><span class="course-code">ST-04</span></div>
+        <h3>Data Analytics Specialist Track</h3>
+        <p class="course-for">For career-switchers and aspiring data analysts.</p>
+        <ul>
+          <li>Python (Pandas, NumPy) for analysis at production scale</li>
+          <li>SQL for data extraction — JOINs and window functions</li>
+          <li>Power BI dashboards designed for executive audiences</li>
+          <li>Statistics for analysts — descriptive and inferential basics</li>
+          <li>Capstone — a client-style dashboard with insight report</li>
+        </ul>
+        <div class="course-foot">
+          <span class="cf-duration">8 Weeks · 32 Hrs</span>
+          <span class="cf-price"><span class="cf-pkr">PKR</span>21,500</span>
         </div>
-        <aside class="course-price-block">
-          <span class="cp-label">TUITION</span>
-          <span class="cp-amount"><span class="cp-pkr">PKR</span>17,000</span>
-          <span class="cp-hr-label">PER HOUR</span>
-          <span class="cp-hr">PKR 531</span>
-        </aside>
       </article>
 
-      <article class="course">
-        <div class="course-num">15</div>
-        <div class="course-body">
-          <h3>Deep Learning with PyTorch</h3>
-          <p class="course-for">For ML students moving into deep learning and research.</p>
-          <ul>
-            <li>Neural network fundamentals from scratch in PyTorch</li>
-            <li>Convolutional networks for computer vision</li>
-            <li>RNNs and LSTMs for sequence data</li>
-            <li>Transformers and the attention mechanism</li>
-            <li>Transfer learning and Hugging Face essentials</li>
-            <li>Capstone — an image classifier or NLP model, deployed</li>
-          </ul>
+      <article class="course glass tilt course-hero">
+        <div class="course-top"><span class="course-code">ST-05</span><span class="course-flag">★ HERO</span></div>
+        <h3>Generative AI Engineering</h3>
+        <p class="course-for">For developers building real generative AI products.</p>
+        <ul>
+          <li>LLM internals — tokens, embeddings, and context windows demystified</li>
+          <li>LangChain and LlamaIndex for production applications</li>
+          <li>RAG architectures — chunking, vector DBs (Pinecone, Chroma, Qdrant)</li>
+          <li>Fine-tuning versus RAG versus prompting — when to use what</li>
+          <li>Deployment with FastAPI, Streamlit, and Docker</li>
+          <li>Capstone — a domain-specific chatbot (legal, medical, or EdTech)</li>
+        </ul>
+        <div class="course-foot">
+          <span class="cf-duration">8 Weeks · 32 Hrs</span>
+          <span class="cf-price"><span class="cf-pkr">PKR</span>22,500</span>
         </div>
-        <aside class="course-price-block">
-          <span class="cp-label">TUITION</span>
-          <span class="cp-amount"><span class="cp-pkr">PKR</span>19,500</span>
-          <span class="cp-hr-label">PER HOUR</span>
-          <span class="cp-hr">PKR 609</span>
-        </aside>
+      </article>
+
+      <article class="course glass tilt course-hero">
+        <div class="course-top"><span class="course-code">ST-06</span><span class="course-flag">★ HERO</span></div>
+        <h3>AI Agents &amp; Automation Engineering</h3>
+        <p class="course-for">For developers, automation engineers, and AI builders.</p>
+        <ul>
+          <li>Agent frameworks — LangGraph, CrewAI, and AutoGen compared</li>
+          <li>Tool use, function calling, and memory systems</li>
+          <li>Multi-agent orchestration patterns</li>
+          <li>Production concerns — error handling and observability with LangSmith</li>
+          <li>Capstone — a deployed multi-agent system (research, sales SDR, or content)</li>
+        </ul>
+        <div class="course-foot">
+          <span class="cf-duration">8 Weeks · 32 Hrs</span>
+          <span class="cf-price"><span class="cf-pkr">PKR</span>23,000</span>
+        </div>
+      </article>
+
+      <article class="course glass tilt">
+        <div class="course-top"><span class="course-code">ST-07</span></div>
+        <h3>Machine Learning Fundamentals</h3>
+        <p class="course-for">For CS and EE students and aspiring ML engineers.</p>
+        <ul>
+          <li>Just-enough math — linear algebra, calculus, and statistics for ML</li>
+          <li>Scikit-learn end-to-end pipelines</li>
+          <li>Trees and ensembles — Random Forest, XGBoost, and LightGBM</li>
+          <li>Introduction to neural networks</li>
+          <li>Capstone — an end-to-end ML project, deployed and shareable</li>
+        </ul>
+        <div class="course-foot">
+          <span class="cf-duration">8 Weeks · 32 Hrs</span>
+          <span class="cf-price"><span class="cf-pkr">PKR</span>21,500</span>
+        </div>
+      </article>
+
+      <article class="course glass tilt">
+        <div class="course-top"><span class="course-code">ST-08</span></div>
+        <h3>Deep Learning with PyTorch</h3>
+        <p class="course-for">For ML students moving into deep learning and research.</p>
+        <ul>
+          <li>Neural network fundamentals from scratch in PyTorch</li>
+          <li>Convolutional networks for computer vision</li>
+          <li>RNNs and LSTMs for sequence data</li>
+          <li>Transformers and the attention mechanism</li>
+          <li>Capstone — an image classifier or NLP model, deployed</li>
+        </ul>
+        <div class="course-foot">
+          <span class="cf-duration">8 Weeks · 32 Hrs</span>
+          <span class="cf-price"><span class="cf-pkr">PKR</span>23,000</span>
+        </div>
       </article>
 
     </div>
@@ -659,257 +584,115 @@
 </section>
 
 <!-- ── SECTION 04 · CAREER TRACKS ── -->
-<section id="tier-career" class="section tier tier-gray">
+<section id="tier-career" class="section tier tier-alt">
   <div class="container">
     <div class="tier-intro">
       <div>
-        <div class="tier-intro-meta">SECTION 04 · PROGRAMS 16–20</div>
+        <div class="tier-intro-meta">SECTION 04 · CAREER TRACKS CT-01 – CT-05</div>
         <h2>Three-month <span>career tracks.</span></h2>
-        <p>Forty-eight hours of comprehensive instruction. Portfolio projects. Resume reviews, GitHub audits, and interview preparation. These programs are designed to change what you do for a living.</p>
+        <p>Flagship multi-project programs complete with interview prep and comprehensive portfolio architecture. These programs are designed to change what you do for a living.</p>
       </div>
-      <div class="tier-stats">
-        <div class="ts-item"><span class="ts-key">Duration</span><span class="ts-val">12 wks</span></div>
+      <div class="tier-stats glass">
+        <div class="ts-item"><span class="ts-key">Duration</span><span class="ts-val">3 mo</span></div>
         <div class="ts-item"><span class="ts-key">Hours</span><span class="ts-val">48</span></div>
         <div class="ts-item"><span class="ts-key">Programs</span><span class="ts-val">5</span></div>
-        <div class="ts-item"><span class="ts-key">From</span><span class="ts-val">PKR 25,000</span></div>
+        <div class="ts-item"><span class="ts-key">From</span><span class="ts-val">PKR 38,000</span></div>
       </div>
     </div>
-    <div class="course-list">
+    <div class="course-grid">
 
-      <article class="course">
-        <div class="course-num">16</div>
-        <div class="course-body">
-          <h3>Complete Data Science Bootcamp</h3>
-          <p class="course-for">For career-switchers building the full data science skill set.</p>
-          <ul>
-            <li>Python, NumPy, Pandas, and visualisation libraries</li>
-            <li>Statistics and probability for data science</li>
-            <li>SQL and the fundamentals of data engineering</li>
-            <li>Machine learning — supervised and unsupervised</li>
-            <li>Introduction to deep learning</li>
-            <li>Power BI or Tableau for business communication</li>
-            <li>Capstone — two portfolio-ready projects with GitHub and LinkedIn polish</li>
-          </ul>
+      <article class="course glass tilt course-flagship">
+        <div class="course-top"><span class="course-code">CT-01</span><span class="course-flag flag-gold">★ FLAGSHIP</span></div>
+        <h3>Full-Stack Development (Laravel)</h3>
+        <p class="course-for">Robust backend development, MVC patterns &amp; database architectures.</p>
+        <ul>
+          <li>PHP fundamentals and modern OOP for Laravel</li>
+          <li>Laravel core — routing, controllers, Eloquent ORM, Blade templates</li>
+          <li>Authentication, authorisation, and middleware in production apps</li>
+          <li>RESTful APIs, Laravel Sanctum, and front-end with Tailwind &amp; Livewire</li>
+          <li>Database design, migrations, and query optimisation</li>
+          <li>Deployment — VPS, GitHub Actions, and CI/CD</li>
+          <li>Capstone — a deployed full-stack web application, portfolio-ready</li>
+        </ul>
+        <div class="course-foot">
+          <span class="cf-duration">3 Months</span>
+          <span class="cf-price"><span class="cf-pkr">PKR</span>40,000</span>
         </div>
-        <aside class="course-price-block">
-          <span class="cp-label">TUITION</span>
-          <span class="cp-amount"><span class="cp-pkr">PKR</span>25,000</span>
-          <span class="cp-hr-label">PER HOUR</span>
-          <span class="cp-hr">PKR 520</span>
-        </aside>
       </article>
 
-      <article class="course course-flagship">
-        <div class="course-num">17</div>
-        <div class="course-body">
-          <h3>Generative AI &amp; LLM Engineering Mastery <span class="star">★</span></h3>
-          <p class="course-for">Flagship program. For serious AI builders and future LLM engineers.</p>
-          <ul>
-            <li>The LLM landscape, economics, and how to choose the right model</li>
-            <li>Advanced prompt engineering — patterns, evaluation, and tooling</li>
-            <li>LangChain and LlamaIndex deep dives</li>
-            <li>RAG — advanced chunking, hybrid search, re-ranking, and evaluation</li>
-            <li>Vector DBs in depth — Pinecone, Weaviate, Chroma, and Qdrant</li>
-            <li>Fine-tuning with LoRA and QLoRA — when and how</li>
-            <li>Agent systems — LangGraph, CrewAI, and multi-agent design patterns</li>
-            <li>Production — FastAPI, Docker, observability, and cost optimisation</li>
-            <li>Capstone — three portfolio projects: chatbot, agent, RAG-over-docs</li>
-          </ul>
+      <article class="course glass tilt">
+        <div class="course-top"><span class="course-code">CT-02</span></div>
+        <h3>Complete Data Science Bootcamp</h3>
+        <p class="course-for">For career-switchers building the full data science skill set.</p>
+        <ul>
+          <li>Python, NumPy, Pandas, and visualisation libraries</li>
+          <li>Statistics and probability for data science</li>
+          <li>SQL and the fundamentals of data engineering</li>
+          <li>Machine learning — supervised and unsupervised</li>
+          <li>Introduction to deep learning + Power BI or Tableau</li>
+          <li>Capstone — two portfolio-ready projects with GitHub polish</li>
+        </ul>
+        <div class="course-foot">
+          <span class="cf-duration">3 Months · 48 Hrs</span>
+          <span class="cf-price"><span class="cf-pkr">PKR</span>38,000</span>
         </div>
-        <aside class="course-price-block">
-          <span class="cp-label">TUITION</span>
-          <span class="cp-amount"><span class="cp-pkr">PKR</span>30,000</span>
-          <span class="cp-hr-label">PER HOUR</span>
-          <span class="cp-hr">PKR 625</span>
-        </aside>
       </article>
 
-      <article class="course">
-        <div class="course-num">18</div>
-        <div class="course-body">
-          <h3>AI Engineering Career Track</h3>
-          <p class="course-for">For job-seekers targeting AI engineer roles end-to-end.</p>
-          <ul>
-            <li>Python and ML fundamentals</li>
-            <li>Deep learning with PyTorch</li>
-            <li>LLMs, RAG, and agents</li>
-            <li>MLOps basics — Docker, CI/CD, and model serving</li>
-            <li>AI system design — chatbots, recommenders, and search</li>
-            <li>Resume, GitHub, LinkedIn polish, and mock interviews</li>
-            <li>Capstone — three deployed projects with portfolio audit</li>
-          </ul>
+      <article class="course glass tilt course-flagship">
+        <div class="course-top"><span class="course-code">CT-03</span><span class="course-flag flag-gold">★ FLAGSHIP</span></div>
+        <h3>Generative AI &amp; LLM Engineering Mastery</h3>
+        <p class="course-for">For serious AI builders and future LLM engineers.</p>
+        <ul>
+          <li>The LLM landscape, economics, and how to choose the right model</li>
+          <li>Advanced prompt engineering — patterns, evaluation, and tooling</li>
+          <li>LangChain and LlamaIndex deep dives</li>
+          <li>RAG — advanced chunking, hybrid search, re-ranking, and evaluation</li>
+          <li>Fine-tuning with LoRA and QLoRA — when and how</li>
+          <li>Agent systems — LangGraph, CrewAI, and multi-agent design patterns</li>
+          <li>Production — FastAPI, Docker, observability, cost optimisation</li>
+          <li>Capstone — three portfolio projects: chatbot, agent, RAG-over-docs</li>
+        </ul>
+        <div class="course-foot">
+          <span class="cf-duration">3 Months · 48 Hrs</span>
+          <span class="cf-price"><span class="cf-pkr">PKR</span>42,000</span>
         </div>
-        <aside class="course-price-block">
-          <span class="cp-label">TUITION</span>
-          <span class="cp-amount"><span class="cp-pkr">PKR</span>32,000</span>
-          <span class="cp-hr-label">PER HOUR</span>
-          <span class="cp-hr">PKR 666</span>
-        </aside>
       </article>
 
-      <article class="course">
-        <div class="course-num">19</div>
-        <div class="course-body">
-          <h3>Machine Learning Engineer Track</h3>
-          <p class="course-for">For aspiring ML engineers and CS graduates entering the field.</p>
-          <ul>
-            <li>Python, statistics, and SQL refresher</li>
-            <li>Classical ML end-to-end with Scikit-learn and XGBoost</li>
-            <li>Deep learning — PyTorch, CNNs, and Transformers</li>
-            <li>Deployment — FastAPI, Docker, basic cloud (Azure / Render)</li>
-            <li>MLOps essentials — versioning, monitoring, and retraining</li>
-            <li>Capstone — an ML system in production</li>
-          </ul>
+      <article class="course glass tilt">
+        <div class="course-top"><span class="course-code">CT-04</span></div>
+        <h3>AI Engineering Career Track</h3>
+        <p class="course-for">For job-seekers targeting AI engineer roles end-to-end.</p>
+        <ul>
+          <li>Python and ML fundamentals</li>
+          <li>Deep learning with PyTorch</li>
+          <li>LLMs, RAG, and agents</li>
+          <li>MLOps basics — Docker, CI/CD, and model serving</li>
+          <li>AI system design — chatbots, recommenders, and search</li>
+          <li>Resume, GitHub, LinkedIn polish, and mock interviews</li>
+          <li>Capstone — three deployed projects with portfolio audit</li>
+        </ul>
+        <div class="course-foot">
+          <span class="cf-duration">3 Months · 48 Hrs</span>
+          <span class="cf-price"><span class="cf-pkr">PKR</span>45,000</span>
         </div>
-        <aside class="course-price-block">
-          <span class="cp-label">TUITION</span>
-          <span class="cp-amount"><span class="cp-pkr">PKR</span>28,000</span>
-          <span class="cp-hr-label">PER HOUR</span>
-          <span class="cp-hr">PKR 583</span>
-        </aside>
       </article>
 
-      <article class="course">
-        <div class="course-num">20</div>
-        <div class="course-body">
-          <h3>Full-Stack AI Developer</h3>
-          <p class="course-for">For coders who want to ship real AI SaaS products.</p>
-          <ul>
-            <li>Python and Next.js fundamentals</li>
-            <li>LLM APIs and prompt engineering for production</li>
-            <li>Building AI apps — chatbots, agents, automations</li>
-            <li>Vector DBs and RAG in product context</li>
-            <li>Deploying with Vercel, Railway, and Docker</li>
-            <li>Vibe coding workflows — Cursor and Claude Code</li>
-            <li>Capstone — ship a real AI product end-to-end</li>
-          </ul>
+      <article class="course glass tilt">
+        <div class="course-top"><span class="course-code">CT-05</span></div>
+        <h3>Machine Learning Engineer Track</h3>
+        <p class="course-for">For aspiring ML engineers and CS graduates entering the field.</p>
+        <ul>
+          <li>Python, statistics, and SQL refresher</li>
+          <li>Classical ML end-to-end with Scikit-learn and XGBoost</li>
+          <li>Deep learning — PyTorch, CNNs, and Transformers</li>
+          <li>Deployment — FastAPI, Docker, basic cloud (Azure / Render)</li>
+          <li>MLOps essentials — versioning, monitoring, and retraining</li>
+          <li>Capstone — an ML system in production</li>
+        </ul>
+        <div class="course-foot">
+          <span class="cf-duration">3 Months · 48 Hrs</span>
+          <span class="cf-price"><span class="cf-pkr">PKR</span>40,000</span>
         </div>
-        <aside class="course-price-block">
-          <span class="cp-label">TUITION</span>
-          <span class="cp-amount"><span class="cp-pkr">PKR</span>30,000</span>
-          <span class="cp-hr-label">PER HOUR</span>
-          <span class="cp-hr">PKR 625</span>
-        </aside>
-      </article>
-
-    </div>
-  </div>
-</section>
-
-<!-- ── SECTION 05 · DESIGN & WEB ── -->
-<section id="tier-design" class="section tier tier-design">
-  <div class="container">
-    <div class="tier-intro">
-      <div>
-        <div class="tier-intro-meta">SECTION 05 · PROGRAMS 21–24 · NEW FOR JULY 2026</div>
-        <h2>Design &amp; <span>Web tracks.</span></h2>
-        <p>Career-grade programs in WordPress, Graphic Design, UI/UX, and Full-Stack Laravel. Built for designers and developers ready to ship real products. <strong>Early-bird pricing locked until 29 June 2026.</strong></p>
-      </div>
-      <div class="tier-stats">
-        <div class="ts-item"><span class="ts-key">Duration</span><span class="ts-val">2–3 mo</span></div>
-        <div class="ts-item"><span class="ts-key">Programs</span><span class="ts-val">4</span></div>
-        <div class="ts-item"><span class="ts-key">Starts</span><span class="ts-val">1 July</span></div>
-        <div class="ts-item"><span class="ts-key">Early-Bird</span><span class="ts-val">PKR 16K</span></div>
-      </div>
-    </div>
-    <div class="course-list">
-
-      <article class="course">
-        <div class="course-num">21</div>
-        <div class="course-body">
-          <h3>WordPress Development</h3>
-          <p class="course-for">For aspiring web developers and freelancers building client sites.</p>
-          <ul>
-            <li>WordPress fundamentals — hosting, domains, dashboard, and core architecture</li>
-            <li>Theme customisation, Elementor, and modern page builders</li>
-            <li>Plugins, security, performance, and SEO essentials</li>
-            <li>WooCommerce — building real e-commerce stores end-to-end</li>
-            <li>Custom post types, ACF, and lightweight PHP for theme tweaks</li>
-            <li>Capstone — deploy a live, client-grade website (business or e-commerce)</li>
-          </ul>
-        </div>
-        <aside class="course-price-block course-price-pair">
-          <span class="cp-early-badge">EARLY-BIRD</span>
-          <span class="cp-label">TUITION</span>
-          <span class="cp-amount"><span class="cp-pkr">PKR</span>16,000</span>
-          <span class="cp-strike">Regular PKR 18,000</span>
-          <span class="cp-deadline">Locked until 29 June</span>
-          <span class="cp-duration">2 months · Starts 1 July</span>
-        </aside>
-      </article>
-
-      <article class="course">
-        <div class="course-num">22</div>
-        <div class="course-body">
-          <h3>Graphic Designing</h3>
-          <p class="course-for">For aspiring graphic designers, freelancers, and visual communicators.</p>
-          <ul>
-            <li>Design fundamentals — colour, typography, composition, and hierarchy</li>
-            <li>Adobe Photoshop and Illustrator from foundations to professional output</li>
-            <li>Logo design, branding kits, and visual identity systems</li>
-            <li>Social media design, posters, and print-ready artwork</li>
-            <li>Working with clients — briefs, revisions, and presenting work</li>
-            <li>Capstone — a complete brand identity package, portfolio-ready</li>
-          </ul>
-        </div>
-        <aside class="course-price-block course-price-pair">
-          <span class="cp-early-badge">EARLY-BIRD</span>
-          <span class="cp-label">TUITION</span>
-          <span class="cp-amount"><span class="cp-pkr">PKR</span>16,000</span>
-          <span class="cp-strike">Regular PKR 18,000</span>
-          <span class="cp-deadline">Locked until 29 June</span>
-          <span class="cp-duration">2 months · Starts 1 July</span>
-        </aside>
-      </article>
-
-      <article class="course">
-        <div class="course-num">23</div>
-        <div class="course-body">
-          <h3>UI / UX Designing</h3>
-          <p class="course-for">For product-minded designers and developers entering the field.</p>
-          <ul>
-            <li>UX research, user flows, and information architecture</li>
-            <li>Wireframing, prototyping, and design thinking</li>
-            <li>Figma end-to-end — components, auto-layout, design systems</li>
-            <li>Visual design for digital products — typography, colour, and spacing</li>
-            <li>Usability testing and design critique</li>
-            <li>Capstone — a full product redesign or new app concept, prototyped</li>
-          </ul>
-        </div>
-        <aside class="course-price-block course-price-pair">
-          <span class="cp-early-badge">EARLY-BIRD</span>
-          <span class="cp-label">TUITION</span>
-          <span class="cp-amount"><span class="cp-pkr">PKR</span>16,000</span>
-          <span class="cp-strike">Regular PKR 18,000</span>
-          <span class="cp-deadline">Locked until 29 June</span>
-          <span class="cp-duration">2 months · Starts 1 July</span>
-        </aside>
-      </article>
-
-      <article class="course course-flagship">
-        <div class="course-num">24</div>
-        <div class="course-body">
-          <h3>Full-Stack Development with Laravel <span class="star">★</span></h3>
-          <p class="course-for">Flagship program. For developers building real, deployed web applications.</p>
-          <ul>
-            <li>PHP fundamentals and modern OOP for Laravel</li>
-            <li>Laravel core — routing, controllers, Eloquent ORM, and Blade templates</li>
-            <li>Authentication, authorisation, and middleware in production apps</li>
-            <li>RESTful APIs, Laravel Sanctum, and Postman workflows</li>
-            <li>Front-end with Tailwind CSS, Alpine.js, and Livewire</li>
-            <li>Database design, migrations, seeders, and query optimisation</li>
-            <li>Deployment — VPS, shared hosting, GitHub Actions, and CI/CD</li>
-            <li>Capstone — a deployed full-stack web application, portfolio-ready</li>
-          </ul>
-        </div>
-        <aside class="course-price-block course-price-pair">
-          <span class="cp-early-badge">EARLY-BIRD</span>
-          <span class="cp-label">TUITION</span>
-          <span class="cp-amount"><span class="cp-pkr">PKR</span>35,000</span>
-          <span class="cp-strike">Regular PKR 40,000</span>
-          <span class="cp-deadline">Locked until 29 June</span>
-          <span class="cp-duration">3 months · Starts 1 July</span>
-        </aside>
       </article>
 
     </div>
@@ -925,25 +708,25 @@
       <p>Programs are designed to stack. Start where your current level is honest, then climb. Loyalty discounts apply at each step — progression rewards you twice, in skill and in price.</p>
     </div>
     <ol class="stages">
-      <li class="stage">
+      <li class="stage glass">
         <div class="stage-num-wrap">i.</div>
         <div class="stage-body">
           <span class="stage-tag">STAGE 01 · CURIOUS</span>
           <h3>Test the water.</h3>
-          <p>No coding background. Pick a 2-week bootcamp aligned with your interests — automation, prompts, or business AI.</p>
+          <p>No coding background. Pick a 2-week bootcamp aligned with your interests — automation, prompts, or everyday AI.</p>
         </div>
         <aside class="stage-rec">
           <span class="stage-rec-tag">RECOMMENDED</span>
           <strong>Prompt Engineering Mastery</strong>
-          <em>or AI for Business</em>
+          <em>or Everyday AI</em>
         </aside>
       </li>
-      <li class="stage">
+      <li class="stage glass">
         <div class="stage-num-wrap">ii.</div>
         <div class="stage-body">
           <span class="stage-tag">STAGE 02 · BUILDING</span>
           <h3>Lay the foundations.</h3>
-          <p>You have decided AI is your direction. Build the core skill — Python, SQL, or the basics of generative AI.</p>
+          <p>You have decided AI is your direction. Build the core skill — Python, analytics, or the basics of generative AI.</p>
         </div>
         <aside class="stage-rec">
           <span class="stage-rec-tag">RECOMMENDED</span>
@@ -951,12 +734,12 @@
           <em>or Generative AI Essentials</em>
         </aside>
       </li>
-      <li class="stage">
+      <li class="stage glass">
         <div class="stage-num-wrap">iii.</div>
         <div class="stage-body">
           <span class="stage-tag">STAGE 03 · SPECIALISING</span>
           <h3>Pick your edge.</h3>
-          <p>Go deep on the one thing the market is paying for — generative AI engineering, AI agents, or deep learning.</p>
+          <p>Go deep on the one thing the market is paying for — generative AI engineering, AI agents, deep learning, or design.</p>
         </div>
         <aside class="stage-rec stage-rec-hero">
           <span class="stage-rec-tag">HERO PROGRAM</span>
@@ -964,7 +747,7 @@
           <em>or AI Agents &amp; Automation</em>
         </aside>
       </li>
-      <li class="stage">
+      <li class="stage glass">
         <div class="stage-num-wrap">iv.</div>
         <div class="stage-body">
           <span class="stage-tag">STAGE 04 · CAREER</span>
@@ -985,12 +768,12 @@
 <section id="enrol" class="section enrol">
   <div class="container">
     <div class="section-head">
-      <span class="section-label">ENROLMENT</span>
+      <span class="section-label">ENROLMENT · AUGUST 2026</span>
       <h2>How to <span>enrol.</span></h2>
-      <p>Four steps from this page to your first class. Classes start on the 1st of every month.</p>
+      <p>Four steps from this page to your first class. Registration closes 31 July — classes commence 1 August.</p>
     </div>
     <div class="enrol-grid">
-      <div class="enrol-card">
+      <div class="enrol-card glass tilt">
         <h4>THE PROCESS</h4>
         <p class="enrol-sub">Four steps to your first class.</p>
         <ol class="enrol-steps">
@@ -1000,7 +783,7 @@
           <li><span>4</span>You join the cohort WhatsApp group and receive your first session calendar invite.</li>
         </ol>
       </div>
-      <div class="enrol-card">
+      <div class="enrol-card glass tilt">
         <h4>WHAT'S INCLUDED</h4>
         <p class="enrol-sub">Every program ships with this foundation.</p>
         <ul class="enrol-bullets">
@@ -1012,7 +795,7 @@
           <li>Bundle ladder discount on the next program in your path</li>
         </ul>
       </div>
-      <div class="enrol-card">
+      <div class="enrol-card glass tilt">
         <h4>COHORT POLICY</h4>
         <p class="enrol-sub">Small cohorts. Honest commitments.</p>
         <ul class="enrol-bullets">
@@ -1022,7 +805,7 @@
           <li>Refund within the first week, less any platform fees</li>
         </ul>
       </div>
-      <div class="enrol-card">
+      <div class="enrol-card glass tilt">
         <h4>DISCOUNTS &amp; BUNDLES</h4>
         <p class="enrol-sub">Progress is priced to reward you.</p>
         <ul class="enrol-bullets">
@@ -1041,7 +824,7 @@
       <div class="enrol-cta-right">
         <div class="enrol-channel">
           <span class="enrol-channel-key">EMAIL</span>
-          <a href="mailto:echolens816@gmail.com">echolens816@gmail.com</a>
+          <a href="mailto:info@echolens.digital">info@echolens.digital</a>
         </div>
         <div class="enrol-channel">
           <span class="enrol-channel-key">PHONE &amp; WHATSAPP</span>
@@ -1051,7 +834,7 @@
           <span class="enrol-channel-key">WEBSITE</span>
           <a href="https://www.echolens.digital" target="_blank" rel="noopener">www.echolens.digital</a>
         </div>
-        <a href="https://wa.me/923141479109?text=Hi%20EchoLens%21%20I%27m%20interested%20in%20enrolling%20in%20the%20July%202026%20cohort." target="_blank" rel="noopener" class="btn-enrol-wa">
+        <a href="https://wa.me/923141479109?text=Hi%20EchoLens%21%20I%27m%20interested%20in%20enrolling%20in%20the%20August%202026%20cohort." target="_blank" rel="noopener" class="btn-enrol-wa">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
           Reserve Your Seat on WhatsApp
         </a>
@@ -1067,14 +850,14 @@
       <span class="section-label">FAQ</span>
       <h2>Questions, <span>answered honestly.</span></h2>
     </div>
-    <div class="faq-list">
+    <div class="faq-list glass">
       <details class="faq-item">
         <summary><span class="faq-q-num">01</span><span class="faq-q-text">Do I need a background in coding or maths?</span><span class="faq-icon">+</span></summary>
         <p>For bootcamps and short courses, no — we build the foundation with you. For specialist and career tracks, comfort with basic Python helps, and we'll tell you honestly on the intake call whether you should take a foundational course first.</p>
       </details>
       <details class="faq-item">
         <summary><span class="faq-q-num">02</span><span class="faq-q-text">Are classes live or recorded?</span><span class="faq-icon">+</span></summary>
-        <p>All classes are live — instructor-led, two hours, twice a week. Sessions are recorded so you can rewatch, but the live cohort is where the real work happens.</p>
+        <p>All classes are live — instructor-led, two hours, twice a week, 100% online. Sessions are recorded so you can rewatch, but the live cohort is where the real work happens.</p>
       </details>
       <details class="faq-item">
         <summary><span class="faq-q-num">03</span><span class="faq-q-text">What if I miss a class?</span><span class="faq-icon">+</span></summary>
@@ -1105,7 +888,7 @@
           <img src="logo.png" alt="EchoLens" class="footer-logo">
           <span class="footer-wordmark">ECHO<span>LENS</span></span>
         </div>
-        <p>Pakistan's AI Intelligence Platform. 24 career-grade programs in AI, Data Science, Generative AI, and modern Web &amp; Design.</p>
+        <p>Pakistan's AI Intelligence Platform. 21 career-grade programs in AI, Data Science, Generative AI, and modern Web &amp; Design.</p>
         <span class="footer-tagline">Innovate · Educate · Elevate</span>
       </div>
       <div class="footer-col">
@@ -1125,14 +908,13 @@
           <li><a href="#tier-short">Six-week Short Courses</a></li>
           <li><a href="#tier-specialist">Specialist Tracks</a></li>
           <li><a href="#tier-career">Career Tracks</a></li>
-          <li><a href="#tier-design">Design &amp; Web</a></li>
         </ul>
       </div>
       <div class="footer-col">
         <h5>CONTACT</h5>
-        <a href="mailto:echolens816@gmail.com" class="footer-contact-item">
+        <a href="mailto:info@echolens.digital" class="footer-contact-item">
           <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          echolens816@gmail.com
+          info@echolens.digital
         </a>
         <a href="https://wa.me/923141479109" target="_blank" rel="noopener" class="footer-contact-item">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
@@ -1152,10 +934,11 @@
 </footer>
 
 <!-- WHATSAPP FLOAT -->
-<a href="https://wa.me/923141479109?text=Hi%20EchoLens%21%20I%27m%20interested%20in%20enrolling%20in%20the%20July%202026%20cohort." target="_blank" rel="noopener" class="wa-float" aria-label="Chat on WhatsApp">
+<a href="https://wa.me/923141479109?text=Hi%20EchoLens%21%20I%27m%20interested%20in%20enrolling%20in%20the%20August%202026%20cohort." target="_blank" rel="noopener" class="wa-float" aria-label="Chat on WhatsApp">
   <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
 </a>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script src="script.js"></script>
 </body>
 </html>

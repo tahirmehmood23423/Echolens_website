@@ -1,71 +1,61 @@
 # EchoLens · Course Catalogue 2026
 
-**Pakistan's AI Intelligence Platform** — twenty-four career-grade programs in Artificial Intelligence, Data Science, Generative AI, and modern Web & Design, designed and delivered by NUST-trained engineers building real systems in production.
+**Pakistan's AI Intelligence Platform** — twenty-one career-grade programs in Artificial Intelligence, Data Science, Generative AI, and modern Web & Design, designed and delivered by NUST-trained engineers building real systems in production.
 
 🌐 **Live:** [echolens.digital](https://echolens.digital)
-📧 **Email:** echolens816@gmail.com
+📧 **Email:** info@echolens.digital
 📱 **WhatsApp:** +92 314 1479109
 
 ---
 
-## July 2026 Cohort
+## August 2026 Cohort
 
-- **Enrolment closes:** 29 June 2026
-- **Classes commence:** 1 July 2026
+- **Registration closes:** 31 July 2026
+- **Classes commence:** 1 August 2026
 - **Cadence:** Two live sessions per week, two hours each
-- **Mode:** Live · Remote
-
-Subsequent cohorts launch on the 1st of each month.
+- **Mode:** 100% Online · Live Sessions
 
 ---
 
 ## Catalogue Structure
 
-The 2026 catalogue is organised into five tracks across twenty-four programs:
+The August 2026 catalogue is organised into four tiers across twenty-one programs:
 
-| # | Tier | Duration | Hours | Programs | Price (PKR) |
-|---|------|----------|-------|----------|-------------|
-| 01 | Two-week bootcamps | 2 wks | 8 | 5 | 3,500 – 5,500 |
-| 02 | Six-week short courses | 6 wks | 24 | 5 | 9,000 – 12,500 |
-| 03 | Eight-week specialist tracks | 8 wks | 32 | 5 | 16,500 – 19,500 |
-| 04 | Three-month career tracks | 12 wks | 48 | 5 | 25,000 – 32,000 |
-| 05 | **Design & Web** (NEW) | 8–12 wks | 32–48 | 4 | 16,000 – 40,000 |
+| # | Tier | Duration | Programs | Fee (PKR) |
+|---|------|----------|----------|-----------|
+| 01 | Bootcamps | 2 wks · 8 hrs | 3 | 5,000 |
+| 02 | Short Courses | 6 wks · 24 hrs | 5 | 12,500 – 14,000 |
+| 03 | Specialist & Professional Tracks | 8 wks / 2 mo | 8 | 20,000 – 23,000 |
+| 04 | Career Tracks | 3 months | 5 | 38,000 – 45,000 |
 
-### Section 01 · Two-week Bootcamps
-01. AI Automation with n8n & Make.com — PKR 4,500
-02. Prompt Engineering & ChatGPT / Claude Mastery — PKR 3,500
-03. Vibe Coding with Cursor & Claude Code — PKR 5,500
-04. AI for Business & Productivity — PKR 4,000
-05. No-Code AI Agents — PKR 5,000
+### Section 01 · Bootcamps (2 weeks)
+- BC-01 · AI Automation with n8n & Make.com — PKR 5,000
+- BC-02 · Prompt Engineering & ChatGPT/Claude Mastery — PKR 5,000
+- BC-03 · Everyday AI: Smarter Study, Work & Content — PKR 5,000
 
-### Section 02 · Six-week Short Courses
-06. Python for Data Science — PKR 9,500
-07. Generative AI Essentials — PKR 12,000
-08. SQL for Data Analytics — PKR 9,000
-09. Power BI for Business Analytics — PKR 10,500
-10. Introduction to Machine Learning — PKR 12,500
+### Section 02 · Short Courses (6 weeks)
+- SC-01 · Python for Data Science — PKR 12,500
+- SC-02 · Generative AI Essentials — PKR 14,000
+- SC-03 · Data Analytics with SQL & Power BI — PKR 13,500
+- SC-04 · Introduction to Machine Learning — PKR 13,000
+- SC-05 · AI Automation Tools Track — PKR 14,000
 
-### Section 03 · Eight-week Specialist Tracks
-11. Data Analytics Career Track — PKR 16,500
-12. Generative AI Engineering ★ — PKR 18,500
-13. AI Agents & Automation Engineering ★ — PKR 19,000
-14. Machine Learning Fundamentals — PKR 17,000
-15. Deep Learning with PyTorch — PKR 19,500
+### Section 03 · Specialist & Professional Tracks (8 weeks / 2 months)
+- ST-01 · WordPress Development — PKR 20,000
+- ST-02 · Graphic Designing — PKR 20,000
+- ST-03 · UI/UX Designing — PKR 21,000
+- ST-04 · Data Analytics Specialist Track — PKR 21,500
+- ST-05 · Generative AI Engineering ★ — PKR 22,500
+- ST-06 · AI Agents & Automation Engineering ★ — PKR 23,000
+- ST-07 · Machine Learning Fundamentals — PKR 21,500
+- ST-08 · Deep Learning with PyTorch — PKR 23,000
 
-### Section 04 · Three-month Career Tracks
-16. Complete Data Science Bootcamp — PKR 25,000
-17. Generative AI & LLM Engineering Mastery ★ (Flagship) — PKR 30,000
-18. AI Engineering Career Track — PKR 32,000
-19. Machine Learning Engineer Track — PKR 28,000
-20. Full-Stack AI Developer — PKR 30,000
-
-### Section 05 · Design & Web (NEW for July 2026)
-*Early-bird pricing locked until 29 June 2026.*
-
-21. WordPress Development (2 months) — **PKR 16,000** early-bird / PKR 18,000 regular
-22. Graphic Designing (2 months) — **PKR 16,000** early-bird / PKR 18,000 regular
-23. UI / UX Designing (2 months) — **PKR 16,000** early-bird / PKR 18,000 regular
-24. Full-Stack Development with Laravel ★ (3 months) — **PKR 35,000** early-bird / PKR 40,000 regular
+### Section 04 · Career Tracks (3 months)
+- CT-01 · Full-Stack Development (Laravel) ★ — PKR 40,000
+- CT-02 · Complete Data Science Bootcamp — PKR 38,000
+- CT-03 · Generative AI & LLM Engineering Mastery ★ — PKR 42,000
+- CT-04 · AI Engineering Career Track — PKR 45,000
+- CT-05 · Machine Learning Engineer Track — PKR 40,000
 
 ---
 
@@ -91,9 +81,9 @@ The 2026 catalogue is organised into five tracks across twenty-four programs:
 
 ```
 .
-├── index.html              # Single-page editorial catalogue site
-├── styles.css              # Design system — paper, ink, teal, gold
-├── script.js               # Minimal interactions
+├── index.html              # Single-page immersive 3D catalogue site
+├── styles.css              # Design system — deep-space glassmorphism + aurora
+├── script.js               # Three.js 3D particle lens hero, 3D tilt cards, interactions
 ├── logo.png                # Brand mark
 ├── CNAME                   # GitHub Pages custom domain → echolens.digital
 └── README.md               # This file
@@ -101,16 +91,16 @@ The 2026 catalogue is organised into five tracks across twenty-four programs:
 
 ## Design
 
-Editorial typographic system inspired by the printed 2026 catalogue:
+Immersive 3D / aurora glass design system:
 
-- **Display:** Fraunces (variable serif with italic and optical-size axes)
-- **Body:** Inter
-- **Mono / labels:** JetBrains Mono
-- **Palette:** Warm cream paper (#f5efe1), deep ink (#0a1f2e), muted teal accent (#4fa39a), subtle gold (#b8985f)
+- **Display:** Space Grotesk · **Body:** Inter · **Mono / labels:** JetBrains Mono
+- **Palette:** Deep-space indigo (#070b1f), electric violet (#7c5cff), cyan (#22d3ee), gold flagship accent (#f5b74e)
+- **Signature:** A live Three.js 3D "particle lens" in the hero — a rotating particle sphere with a wireframe core and orbit rings, reacting to the cursor — echoing the EchoLens name
+- **3D everywhere:** glassmorphism cards with true perspective tilt on hover, cursor-tracked sheen, animated aurora backdrop, staggered hero type reveal
 
-The site is fully responsive, respects `prefers-reduced-motion`, and is accessible from keyboard.
+The site is fully responsive, respects `prefers-reduced-motion` (3D and animation disable cleanly), degrades gracefully without WebGL, and is accessible from keyboard.
 
----
+Three.js is loaded from the cdnjs CDN (r128) — no build step required.
 
 ## Deployment
 
